@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  postgres:
+    container_name: my_postgres_db
+    image: postgres
+    volumes:
+      - ./dbs/init/nlw_pg.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./dbs/pg/data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=database_nlw
+      - POSTGRES_PASSWORD=postgres
+      - PGPORT=5432
