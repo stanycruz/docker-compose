@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   postgres:
-    container_name: my_postgres_db
+    container_name: my-postgres-db
     image: postgres
     volumes:
       - ./dbs/init/nlw_pg.sql:/docker-entrypoint-initdb.d/init.sql
