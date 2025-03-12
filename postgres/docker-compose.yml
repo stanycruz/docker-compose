@@ -1,7 +1,7 @@
 services:
   postgres:
     container_name: my-postgres-db
-    image: postgres
+    image: postgres:latest
     volumes:
       - ./dbs/init/nlw_pg.sql:/docker-entrypoint-initdb.d/init.sql
       - ./dbs/pg/data:/var/lib/postgresql/data
