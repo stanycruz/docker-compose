@@ -7,3 +7,9 @@ services:
     environment:
       SA_PASSWORD: "p&TUKQvU%pKA60nC"
       ACCEPT_EULA: "Y"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+    restart: unless-stopped
+
+volumes:
+  sqlserver_data:
